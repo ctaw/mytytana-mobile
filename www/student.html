@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>Tytana</title>
+
+    <!-- css customized -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/student/styles.css" />
+
+    <!-- js customized -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/scripts.js"></script>
+    
+  </head>
+  
+  <body>
+    <!-- content goes here-->
+  <div class="wrapper">
+    <div class="box">
+      <div class="row row-offcanvas row-offcanvas-left">
+      <!-- before div 3 -->
+
+        <!-- sidebar -->
+        <div class="column col-sm-2 col-xs-1 sidebar-offcanvas" id="sidebar">
+
+          <ul class="nav">
+            <li>
+              <a href="#" data-toggle="offcanvas" class="visible-xs text-center"><i class="glyphicon glyphicon-chevron-right"></i></a>
+            </li>
+          </ul>
+
+          <ul class="nav hidden-xs" id="lg-menu">
+            <li class="active"><a href="student.html"><i class="glyphicon glyphicon-user"></i> Student Profile</a></li>
+            <li><a href="#stories"><i class="glyphicon glyphicon-duplicate"></i> Class Schedule</a></li>
+            <li><a href="#"><i class="glyphicon glyphicon-list-alt"></i> Current Grades</a></li>
+            <li><a href="#"><i class="glyphicon glyphicon-book"></i> Scholastic Record</a></li>
+            <li><a href="#"><i class="glyphicon glyphicon-calendar"></i> Calendar</a></li>
+          </ul>
+
+          <!-- tiny only nav-->
+          <ul class="nav visible-xs" id="xs-menu">
+            <li><a href="#featured" class="text-center"><i class="glyphicon glyphicon-user"></i></a></li>
+            <li><a href="#stories" class="text-center"><i class="glyphicon glyphicon-duplicate"></i></a></li>
+            <li><a href="#" class="text-center"><i class="glyphicon glyphicon-list-alt"></i></a></li>
+            <li><a href="#" class="text-center"><i class="glyphicon glyphicon-book"></i></a></li>
+            <li><a href="#" class="text-center"><i class="glyphicon glyphicon-calendar"></i></a></li>
+          </ul>
+
+        </div>
+        <!-- /sidebar -->
+
+
+        <div class="column col-sm-10 col-xs-11" id="main"><!-- main right col -->
+
+          <!-- top nav -->
+          <div class="navbar navbar-blue navbar-static-top">  
+            <div class="navbar-header">
+              <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a href="/" class="navbar-brand logo">T</a>
+            </div>
+            <nav class="collapse navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> My Account </a>
+                <ul class="dropdown-menu">
+                  <li><a href="index.html">Logout</a></li>
+                </ul>
+              </li>
+            </ul>
+            </nav>
+          </div>
+          <!-- /top nav -->
+
+
+          <div class="full col-sm-9"><!-- full col -->
+            <div class="row">
+              <div class="col-md-2 col-md-offset-5">
+                <img src="img/avatar.png" class="img-circle pull-left">
+              </div>
+            </div>
+            
+            <br>
+
+            <div class="row"><!-- row -->
+              <div class="panel-group" id="accordion">
+                <div class="panel panel-default" id="panel1">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                      <a data-toggle="collapse" data-target="#collapseOne" 
+                         href="#collapseOne">
+                        Student Information
+                      </a>
+                      </h4>
+                  </div>
+
+                  <div id="collapseOne" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                      <table class="table table-condensed">
+                        <thead>
+                          <tr>
+                            <td>Student no.</td>
+                            <td>2015-001</td>
+                          </tr>
+                          <tr>
+                            <td>Name</td>
+                            <td>GONZALES, Julia P.</td>
+                          </tr>
+                          <tr>
+                            <td>Course</td>
+                            <td>BSIT</td>
+                          </tr>
+                          <tr>
+                            <td>Year Level</td>
+                            <td>4</td>
+                          </tr>
+                          <tr>
+                            <td>Curriculum Yr</td>
+                            <td>2011-2015</td>
+                          </tr>
+                          <tr>
+                            <td>Enrollment Status</td>
+                            <td>Regular</td>
+                          </tr>
+                        </thead>
+                      </table>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div><!-- row -->
+
+
+            <div class="row"><!-- row -->
+              <div class="panel-group" id="accordion">
+                <div class="panel panel-default" id="panel1">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                      <a data-toggle="collapse" data-target="#collapseTwo" 
+                         href="#collapseTwo">
+                        Basic Information
+                      </a>
+                      </h4>
+                  </div>
+
+                  <div id="collapseTwo" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                      <table class="table table-condensed">
+                        <thead>
+                          <tr>
+                            <td>Gender</td>
+                            <td>Female</td>
+                          </tr>
+                          <tr>
+                            <td>Birthday</td>
+                            <td>Oct. 14, 1994</td>
+                          </tr>
+                          <tr>
+                            <td>Birth Place</td>
+                            <td>Manila</td>
+                          </tr>
+                          <tr>
+                            <td>Status</td>
+                            <td>Single</td>
+                          </tr>
+                          <tr>
+                            <td>Nationality</td>
+                            <td>Filipino</td>
+                          </tr>
+                          <tr>
+                            <td>Religion</td>
+                            <td>Catholic</td>
+                          </tr>
+                          <tr>
+                            <td>Address</td>
+                            <td>822 Teacher Bliss Cond. Merville</td>
+                          </tr>
+                          <tr>
+                            <td>Town/City</td>
+                            <td>Pasay</td>
+                          </tr>
+                          <tr>
+                            <td>Contact</td>
+                            <td>5521552</td>
+                          </tr>
+                          <tr>
+                            <td>Email</td>
+                            <td>jalia14@hotmail.com</td>
+                          </tr>
+                        </thead>
+                      </table>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div><!-- row -->
+
+
+          </div><!-- full col -->
+        </div><!-- main right col -->
+
+      <!-- before div 3 -->
+      </div>
+    </div>
+  </div>
+  <!-- content goes here-->
+
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+  </body>
+
+</html>
