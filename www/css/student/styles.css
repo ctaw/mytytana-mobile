@@ -125,7 +125,7 @@ hr {
   background-color:#fff;
   color:#11c157;
   height:28px;
-  width:28px;
+  width:70%;
   margin:9px;
   margin-right:2px;
   margin-left:15px;
@@ -133,7 +133,6 @@ hr {
   font-weight:700;
   text-align:center;
   text-decoration:none;
-  text-shadow:0 0 1px;
   border-radius:2px;
 }
 #sidebar-footer {

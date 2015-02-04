@@ -11,6 +11,7 @@
 
     <!-- css customized -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="css/student/styles.css" />
 
     <!-- js customized -->
@@ -32,25 +33,29 @@
 
           <ul class="nav">
             <li>
-              <a href="#" data-toggle="offcanvas" class="visible-xs text-center"><i class="glyphicon glyphicon-chevron-right"></i></a>
+              <a href="#" data-toggle="offcanvas" class="visible-xs text-center"><i class="fa fa-arrow-right"></i></i></a>
             </li>
           </ul>
 
           <ul class="nav hidden-xs" id="lg-menu">
-            <li class="active"><a href="student.html"><i class="glyphicon glyphicon-user"></i> Student Profile</a></li>
-            <li><a href="#stories"><i class="glyphicon glyphicon-duplicate"></i> Class Schedule</a></li>
-            <li><a href="#"><i class="glyphicon glyphicon-list-alt"></i> Current Grades</a></li>
-            <li><a href="#"><i class="glyphicon glyphicon-book"></i> Scholastic Record</a></li>
-            <li><a href="#"><i class="glyphicon glyphicon-calendar"></i> Calendar</a></li>
+            <li class="active"><a href="student.html"><i class="fa fa-user"></i> Student Profile</a></li>
+            <li><a href="schedule.html"><i class="fa fa-calendar-o"></i> Class Schedule</a></li>
+            <li><a href="grade.html"><i class="fa fa-file-text-o"></i> Current Grades</a></li>
+            <li><a href="record.html"><i class="fa fa-book"></i> Scholastic Record</a></li>
+            <li><a href="calendar.html"><i class="fa fa-calendar"></i></i> Calendar</a></li>
+            <li><a href="directory.html"><i class="fa fa-phone"></i></i></i> Directory</a></li>
+            <li><a href="dificiency.html"><i class="fa fa-exclamation-triangle"></i></i></i> Deficiency/ Warning</a></li>
           </ul>
 
           <!-- tiny only nav-->
           <ul class="nav visible-xs" id="xs-menu">
-            <li><a href="#featured" class="text-center"><i class="glyphicon glyphicon-user"></i></a></li>
-            <li><a href="#stories" class="text-center"><i class="glyphicon glyphicon-duplicate"></i></a></li>
-            <li><a href="#" class="text-center"><i class="glyphicon glyphicon-list-alt"></i></a></li>
-            <li><a href="#" class="text-center"><i class="glyphicon glyphicon-book"></i></a></li>
-            <li><a href="#" class="text-center"><i class="glyphicon glyphicon-calendar"></i></a></li>
+            <li><a href="student.html" class="text-center"><i class="fa fa-user"></i></i></a></li>
+            <li><a href="schedule.html" class="text-center"><i class="fa fa-calendar-o"></i></i></a></li>
+            <li><a href="grade.html" class="text-center"><i class="fa fa-file-text-o"></i></i></a></li>
+            <li><a href="record.html" class="text-center"><i class="fa fa-book"></i></i></a></li>
+            <li><a href="calendar.html" class="text-center"><i class="fa fa-calendar"></i></i></a></li>
+            <li><a href="directory.html" class="text-center"><i class="fa fa-phone"></i></i></i></a></li>
+            <li><a href="dificiency.html" class="text-center"><i class="fa fa-exclamation-triangle"></i></i></i></a></li>
           </ul>
 
         </div>
@@ -68,16 +73,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a href="/" class="navbar-brand logo">T</a>
+              <a href="student.html" class="navbar-brand logo">Student Profile</a>
             </div>
             <nav class="collapse navbar-collapse" role="navigation">
             <ul class="nav navbar-nav navbar-right">
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> My Account </a>
-                <ul class="dropdown-menu">
-                  <li><a href="index.html">Logout</a></li>
-                </ul>
-              </li>
+              <li><a href="newsfeed.html"> Newsfeed</a></li>
+              <li><a href="index.html">Logout</a></li>
             </ul>
             </nav>
           </div>
@@ -86,8 +87,9 @@
 
           <div class="full col-sm-9"><!-- full col -->
             <div class="row">
-              <div class="col-md-2 col-md-offset-5">
-                <img src="img/avatar.png" class="img-circle pull-left">
+              <div class="col-md-12">
+                <center><img src="img/avatar.png" class="img-circle"></center>
+
               </div>
             </div>
             
@@ -192,12 +194,85 @@
                             <td>Pasay</td>
                           </tr>
                           <tr>
-                            <td>Contact</td>
+                            <td>Contact No.</td>
                             <td>5521552</td>
                           </tr>
                           <tr>
                             <td>Email</td>
                             <td>jalia14@hotmail.com</td>
+                          </tr>
+                        </thead>
+                      </table>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div><!-- row -->
+
+            <div class="row"><!-- row -->
+              <div class="panel-group" id="accordion">
+                <div class="panel panel-default" id="panel1">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                      <a data-toggle="collapse" data-target="#collapseThree" 
+                         href="#collapseThree">
+                        Guardian Information
+                      </a>
+                      </h4>
+                  </div>
+
+                  <div id="collapseThree" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                      <table class="table table-condensed">
+                        <thead>
+                          <tr>
+                            <td>Guardian/ Parents</td>
+                            <td>Beverly P. Gonzales</td>
+                          </tr>
+                          <tr>
+                            <td>Address</td>
+                            <td>822 Teacher Bliss Con. Merville</td>
+                          </tr>
+                          <tr>
+                            <td>Contact No.</td>
+                            <td>5521552</td>
+                          </tr>
+                        </thead>
+                      </table>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div><!-- row -->
+
+
+            <div class="row"><!-- row -->
+              <div class="panel-group" id="accordion">
+                <div class="panel panel-default" id="panel1">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                      <a data-toggle="collapse" data-target="#collapseFour" 
+                         href="#collapseFour">
+                        Educational Attainment
+                      </a>
+                      </h4>
+                  </div>
+
+                  <div id="collapseFour" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                      <table class="table table-condensed">
+                        <thead>
+                          <tr>
+                            <td>Elementary</td>
+                            <td>Mahatman Gandhi International School</td>
+                            <td>2001-2007</td>
+                          </tr>
+                          <tr>
+                            <td>HS</td>
+                            <td>Pasay City South HS</td>
+                            <td>2007-2011</td>
                           </tr>
                         </thead>
                       </table>
