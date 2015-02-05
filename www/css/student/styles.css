@@ -122,8 +122,9 @@ hr {
 .logo {
   display:block;
   padding:3px;
-  background-color:#fff;
-  color:#11c157;
+  /*background-color:#fff;*/
+  /*color:#11c157;*/
+  color:#fff;
   height:28px;
   width:70%;
   margin:9px;
@@ -265,6 +266,7 @@ margin-top: 18px;
 height: 100px;
 width: 100px;
 background-color: #11C157;
+border: 2px solid #11C157;
 }
 
 /*

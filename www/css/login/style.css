@@ -1,15 +1,17 @@
 body{
-    background: url('http://mymaplist.com/img/parallax/back.png');
-    background-color: #444;
+    background: url('');
+    background-color: #11C157;
     /*background: url(http://mymaplist.com/img/parallax/pinlayer2.png),url(http://mymaplist.com/img/parallax/pinlayer1.png),url(http://mymaplist.com/img/parallax/back.png);    */
 }
 
 .vertical-offset-100{
-    padding-top:30px;
+    padding-top:10px;
 }
 .login-image {
   width: 120px;
-  height: 110px;
+  height: 120px;
+  background-color: #F5F5F5;
+  border: 1px solid #F5F5F5;
 }
 
 .logo-holder{
