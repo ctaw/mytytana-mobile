@@ -1,0 +1,154 @@
+{
+  "project": {
+    "projectSettingsVersion": "1.2",
+    "creationData": {
+      "type": "Import",
+      "projectTypeName": "com.intel.xdk.projecttype.jsapp",
+      "src": "",
+      "projectGuid": "76b1bba3-0d31-4b37-b922-17a9971727ae",
+      "lastModifiedDate": 1425052352599,
+      "creationDate": 1423149018404
+    },
+    "sourceDirectory": "www",
+    "cordovaPluginsDirectory": "plugins",
+    "gameAssetDirectory": "asset",
+    "gameMetadata": {},
+    "startFile": "index.html",
+    "projectTags": [],
+    "projectFiles": {},
+    "projectDirectories": {},
+    "libraries": [],
+    "cordovaPlugins": [
+      {
+        "id": "org.apache.cordova.device",
+        "version": "0.2.9",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "org.apache.cordova.splashscreen",
+        "version": "0.3.0",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      }
+    ],
+    "serviceMethods": [],
+    "buildConfigurations": {
+      "Android": {
+        "platform_": "android",
+        "runtime_": "Cordova 3.x",
+        "name_": "Android",
+        "preferences_": {
+          "android-minSdkVersion": "10",
+          "android-targetSdkVersion": "19",
+          "android-installLocation": "auto"
+        },
+        "isActive_": true,
+        "appName_": "mytytana",
+        "appID_": "not.yet.specified",
+        "appAccess_": [
+          {
+            "origin": "*"
+          }
+        ],
+        "icons_": [
+          {
+            "relPath": "img/logo1.png",
+            "density": "mdpi",
+            "height": 48,
+            "width": 48
+          }
+        ],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "iosProvs_": [],
+        "cordovaCLIVersion_": "3.5",
+        "appVersion_": "0.0.1",
+        "appVersionCode_": "1",
+        "crosswalkVersion_": "stable"
+      },
+      "Android-Crosswalk": {
+        "platform_": "android",
+        "runtime_": "Crosswalk with Cordova 3.x",
+        "name_": "Android-Crosswalk",
+        "preferences_": {
+          "android-minSdkVersion": "14",
+          "android-targetSdkVersion": "19",
+          "android-installLocation": "auto"
+        },
+        "isActive_": true,
+        "appName_": "mytytana",
+        "appID_": "not.yet.specified",
+        "appAccess_": [
+          {
+            "origin": "*"
+          }
+        ],
+        "icons_": [
+          {
+            "relPath": "img/logo1.png",
+            "density": "mdpi",
+            "height": 48,
+            "width": 48
+          }
+        ],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "iosProvs_": [],
+        "cordovaCLIVersion_": "3.5",
+        "appVersion_": "0.0.1",
+        "appVersionCode_": "1",
+        "crosswalkVersion_": "10"
+      },
+      "iOS": {
+        "platform_": "ios",
+        "runtime_": "Cordova 3.x",
+        "name_": "iOS",
+        "preferences_": {
+          "ios-target": "5",
+          "ios-configuration": "adhoc"
+        },
+        "isActive_": true,
+        "appName_": "mytytana",
+        "appID_": "not.yet.specified",
+        "appAccess_": [
+          {
+            "origin": "*"
+          }
+        ],
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "iosProvs_": [],
+        "cordovaCLIVersion_": "3.5",
+        "appVersion_": "0.0.1"
+      },
+      "Windows8": {
+        "platform_": "windows8",
+        "runtime_": "Cordova 3.x",
+        "name_": "Windows8",
+        "preferences_": {},
+        "isActive_": true,
+        "appName_": "mytytana",
+        "appID_": "not.yet.specified",
+        "appAccess_": [
+          {
+            "origin": "*"
+          }
+        ],
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "iosProvs_": [],
+        "cordovaCLIVersion_": "3.5",
+        "appVersion_": "0.0.0.1"
+      }
+    }
+  }
+}

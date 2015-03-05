@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+    <title>Tytana</title>
+
+    <!-- css customized -->
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+    <link href="../css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../css/modified.css" />
+    <link rel="stylesheet" type="text/css" href="../css/student/styles.css" />
+
+    <!-- js customized -->
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/scripts.js"></script>
+    
+  </head>
+  
+  <body>
+    <!-- content goes here-->
+  <div class="wrapper">
+    <div class="box">
+      <div class="row row-offcanvas row-offcanvas-left">
+      <!-- before div 3 -->
+
+        <!-- sidebar -->
+        <div class="column col-sm-2 col-xs-1 sidebar-offcanvas" id="sidebar">
+
+          <ul class="nav">
+            <li>
+               <a href="#" data-toggle="offcanvas" class="visible-xs text-center"><i class="fa fa-list-ul"></i></i></a>
+            </li>
+          </ul>
+
+          <ul class="nav hidden-xs" id="lg-menu">
+            <li class="active"><a href="profile.html"><i class="fa fa-user"></i> Student Profile</a></li>
+            <li><a href="schedule.html"><i class="fa fa-calendar-o"></i> Class Schedule</a></li>
+            <li><a href="grade.html"><i class="fa fa-file-text-o"></i> Current Grades</a></li>
+            <li><a href="record.html"><i class="fa fa-book"></i> Scholastic Record</a></li>
+            <li><a href="deficiency.html"><i class="fa fa-exclamation-triangle"></i></i></i> Deficiency/ Warning</a></li>
+            <li><a href="event.html"><i class="fa fa-calendar"></i></i> Academic Calendar</a></li>
+            <li><a href="directory.html"><i class="fa fa-phone"></i></i></i> Directory</a></li>
+            <br>
+            <li><a href="newsfeed.html"><i class="fa fa-home"></i></i></i> Home</a></li>
+            <li><a href="#" class="logOut"><i class="fa fa-power-off"></i></i></i> Logout</a></li>
+          </ul>
+
+          <!-- tiny only nav-->
+          <ul class="nav visible-xs" id="xs-menu">
+            <li><a href="profile.html" class="text-center"><i class="fa fa-user"></i></i></a></li>
+            <li><a href="schedule.html" class="text-center"><i class="fa fa-calendar-o"></i></i></a></li>
+            <li><a href="grade.html" class="text-center"><i class="fa fa-file-text-o"></i></i></a></li>
+            <li><a href="record.html" class="text-center"><i class="fa fa-book"></i></i></a></li>
+            <li><a href="deficiency.html" class="text-center"><i class="fa fa-exclamation-triangle"></i></i></i></a></li>
+            <li><a href="event.html" class="text-center"><i class="fa fa-phone"></i></i></i></a></li>
+            <li><a href="directory.html" class="text-center"><i class="fa fa-calendar"></i></i></a></li>
+
+            <br>
+            <li><a href="newsfeed.html" class="text-center"><i class="fa fa-home"></i></i></a></li>
+            <li><a href="#" class="text-center logOut"><i class="fa fa-power-off"></i></i></a></li>
+            
+          </ul>
+
+        </div>
+        <!-- /sidebar -->
+
+
+        <div class="column col-sm-10 col-xs-11" id="main"><!-- main right col -->
+
+          <!-- top nav -->
+          <div class="navbar navbar-blue navbar-static-top">  
+            <div class="navbar-header-center">
+              Academic Calendar
+            </div>
+          </div>
+          <!-- /top nav -->
+
+          <div class="full col-sm-9"><!-- full col -->
+
+            <div class="row" id="row-event">
+              
+              <div class="col-lg-6">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          <div class="sem-row1"></div>
+                        </a>
+                      </h4>
+                    </div>
+
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                      <div class="panel-body">
+                        <div class="row" id="eventRow1">
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                          <div class="sem-row2"></div>
+                        </a>
+                      </h4>
+                    </div>
+
+                    <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                      <div class="panel-body">
+                        <div class="row" id="eventRow2">
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div><!-- full col -->
+        </div><!-- main right col -->
+
+      <!-- before div 3 -->
+      </div>
+    </div>
+  </div>
+  <!-- content goes here-->
+    <script>
+      $.ajax({
+        type: 'GET',
+        url: 'https://mytytana.herokuapp.com/api/events.xml',
+        dataType: 'xml',
+        success: function(xmlDoc) {
+          var $xml = $(xmlDoc);
+         
+
+          $xml.find('event').each(function() {
+            var month = $(this).find('month').text();
+            var day = $(this).find('day').text();
+            var caption = $(this).find('caption').text();
+            var sem = $(this).find('sem').text();
+            var year = $(this).find('year').text();
+
+            var nextYear = parseInt(year)  + 1;
+
+            
+            var AY = year + "-" + nextYear;
+            
+          
+            var semVal = 0;
+
+            if(semVal == sem){
+              $(".sem-row1").text(AY + " 1st Semester");
+              $('#eventRow1').append('<table class="events-list"><tbody><tr><td><div class="event-date"><div class="event-day">'+ day +'</div><div class="event-month">'+ month +'</div></div></td><td>'+ caption +'</td></tr></tbody></table>');
+            } else{
+              $(".sem-row2").text(AY + " 2nd Semester");
+              $('#eventRow2').append('<table class="events-list"><tbody><tr><td><div class="event-date"><div class="event-day">'+ day +'</div><div class="event-month">'+ month +'</div></div></td><td>'+ caption +'</td></tr></tbody></table>');
+            }
+
+          });
+        }
+      });   
+    </script>
+
+    <script>
+      $('.logOut').click(function(){
+        delete localStorage.name;
+        window.location.href = "../index.html";
+      })
+    </script>
+
+
+    <script type="text/javascript" src="../cordova.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+  </body>
+
+</html>
