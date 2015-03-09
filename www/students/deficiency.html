@@ -116,9 +116,10 @@
   </div>
   <!-- content goes here-->
     <script>
+      var studentNumber = localStorage.name
       $.ajax({
         type: 'GET',
-        url: 'https://mytytana.herokuapp.com/api/warnings',
+        url: 'https://mytytana.herokuapp.com/api/warnings/'+ studentNumber +'/',
         dataType: 'xml',
         success: function(xmlDoc) {
           var $xml = $(xmlDoc);

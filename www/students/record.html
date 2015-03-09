@@ -86,6 +86,23 @@
 
             
             <div class="row" id="firstSem"><!-- start -->
+              <div class="panel panel-default">
+                <div class="panel-heading"><center><div class="semTitle">A.Y. 1st Semester</div></center></div>
+                  <div class="panel-body">
+                    <table class="table table-condensed table-hover" id="scholasticGrade">
+                      <thead>
+                        <tr>
+                          <th>Subject Code</th>
+                          <th>Sem Grade</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+              </div>
             </div><!-- end -->
 
 
@@ -114,12 +131,18 @@
             var semGrade = $(this).find('sem-grade').text();
             var tillYear = parseInt(year) +1;
 
-            $("#firstSem").append('<div class="panel panel-default">'+
-              '<div class="panel-heading"><center> A.Y. ' +  year + ' - ' + tillYear + ', 1st Semester</center></div>'+
-              '<div class="panel-body"<div class="row"><div class="col-lg-6"><table class="table table-condensed table-hover">'+
-              '<thead><tr><th>Subject Code</th><th>Grade</th></tr></thead>'+
-              '<tbody><tr><td>' + sCode + '</td><td>'+ semGrade +'</td></tr></tbody>' +
-              '</table></div></div></div></div>');
+            
+            
+
+            $('#scholasticGrade > tbody:last').append('<tr><td>'+ sCode +'</td><td>'+ semGrade +'</td></tr>');
+
+
+            // $("#firstSem").append('<div class="panel panel-default">'+
+            //   '<div class="panel-heading"><center> A.Y. ' +  year + ' - ' + tillYear + ', 1st Semester</center></div>'+
+            //   '<div class="panel-body"><div class="row"><div class="col-lg-6"><table class="table table-condensed table-hover">'+
+            //   '<thead><tr><th>Subject Code</th><th>Grade</th></tr></thead>'+
+            //   '<tbody><tr><td>' + sCode + '</td><td>'+ semGrade +'</td></tr></tbody>' +
+            //   '</table></div></div></div></div>');
             
           });
         }
