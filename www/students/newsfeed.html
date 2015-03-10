@@ -110,6 +110,7 @@
             var eDate = $(this).find('event-date').text();
             var description = $(this).find('description').text();
             var path_name = $(this).find('path-name').text();
+            var path = $(this).find('path').text();
 
             var monthNames = ["January", "February", "March", "April", "May", "June",
                               "July", "August", "September", "October", "November", "December"];
@@ -130,12 +131,17 @@
               var photo = '<div></div>';
             }
 
+            if (path != ""){
+              var image_url = '<img src="' + path + '" class="img-responsive img-thumbnail photo-news">';
+            }else{
+              var image_url = '';
+            }
 
             $("#news").append('<div class="row" id="row-news"><div class="col-sm-12 featured-news"><div class="caption" id="title">'+ 
               title +'<div class="pull-right dept">'+
               department +'</div></div><div class="date" id="datePosted">'+
               eventDate +'</div><div class="intro" id="description">'+
-              description + '' + photo +'</div></div></div>');
+              description + '' + photo +'</div><div class="thumbnails-div">'+ image_url +'</div></div></div>');
 
           });
         }
