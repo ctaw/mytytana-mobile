@@ -187,10 +187,10 @@
             var semVal1 = 1;
 
             if(semVal == sem){
-              $(".sem-row1").text(AY + " 1st Semester");
+              $(".sem-row1").text("A.Y" + AY + " 1st Semester");
               $('#eventRow1').append('<table class="events-list"><tbody><tr><td><div class="event-date"><div class="event-day">'+ day +'</div><div class="event-month">'+ month +'</div></div></td><td>'+ caption +'</td></tr></tbody></table>');
             } else if(semVal1 == sem){
-              $(".sem-row2").text(AY + " 2nd Semester");
+              $(".sem-row2").text("A.Y" + AY + " 2nd Semester");
               $('#eventRow2').append('<table class="events-list"><tbody><tr><td><div class="event-date"><div class="event-day">'+ day +'</div><div class="event-month">'+ month +'</div></div></td><td>'+ caption +'</td></tr></tbody></table>');
             } else{
               $(".sem-row3").text("Summer");
