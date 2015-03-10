@@ -58,8 +58,8 @@
             <li><a href="grade.html" class="text-center"><i class="fa fa-file-text-o"></i></i></a></li>
             <li><a href="record.html" class="text-center"><i class="fa fa-book"></i></i></a></li>
             <li><a href="deficiency.html" class="text-center"><i class="fa fa-exclamation-triangle"></i></i></i></a></li>
-            <li><a href="event.html" class="text-center"><i class="fa fa-phone"></i></i></i></a></li>
-            <li><a href="directory.html" class="text-center"><i class="fa fa-calendar"></i></i></a></li>
+            <li><a href="event.html" class="text-center"><i class="fa fa-calendar"></i></i></i></a></li>
+            <li><a href="directory.html" class="text-center"><i class="fa fa-phone"></i></i></a></li>
 
             <br>
             <li><a href="newsfeed.html" class="text-center"><i class="fa fa-home"></i></i></a></li>
@@ -85,7 +85,26 @@
 
 
             
-            <div class="row" id="firstSem"><!-- start -->
+            <div class="row"><!-- start -->
+              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                  <div class="panel-heading-two" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <center><div class="semTitle"></div></center>
+                      </a>
+                    </h4>
+                  </div>
+
+                  <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                      <div class="row" id="firstSem">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div><!-- end -->
 
 
@@ -106,18 +125,34 @@
         success: function(xmlDoc) {
           var $xml = $(xmlDoc);
           $xml.find('grade').each(function() {
+            var year = $(this).find('year').text();
             var sCode = $(this).find('subject-code').text();
             var prelim = $(this).find('prelim').text();
             var midterm = $(this).find('midterm').text();
             var finalG = $(this).find('final').text();
             var semGrade = $(this).find('sem-grade').text();
+            var description = $(this).find('description').text();
+            var lec = $(this).find('unit-lec').text();
+            var lab = $(this).find('unit-lab').text();
+            var tillYear = parseInt(year) +1;
+            var sem = $(this).find('sem').text();
 
-            $("#firstSem").append('<div class="panel panel-default">'+
-              '<div class="panel-heading"><center>' + sCode + '</div>'+
-              '<div class="panel-body"<div class="row"><div class="col-lg-6 pull-right"><table class="table table-condensed table-hover">'+
-              '<thead><tr><th>Prelim</th><th>Midterm</th><th>Finals</th><th>Sem Grade</th></tr></thead>'+
-              '<tbody><tr><td>' + prelim + '</td><td>'+ midterm +'</td><td>'+ finalG+'</td><td>'+ semGrade+'</td></tr></tbody>' +
-              '</table></div></div></div></div>');
+            var current_year = 2014;
+            var current_sem = 1;
+
+            if((current_year <= year) && (current_sem == sem)){
+
+              $(".semTitle").text('A.Y.' + year +' - ' + tillYear +' 2nd Semester');
+
+              $("#firstSem").append('<div class="panel panel-default">'+
+                '<div class="panel-heading"><center>' + sCode + ' - ' + description + '</div>'+
+                '<div class="panel-body"<div class="row">'+
+                '<div class="col-lg-2"><p><b>Units</b></p><p class="info"> Lab '+ lab +'</p><p class="info">Lec '+ lec +'</p></div>' +
+                '<div class="col-lg-10"><div class="table-responsive"><table class="table table-condensed table-hover">'+
+                '<thead><tr><th>Prelim</th><th>Midterm</th><th>Finals</th><th>Sem Grade</th></tr></thead>'+
+                '<tbody><tr><td>' + prelim + '</td><td>'+ midterm +'</td><td>'+ finalG+'</td><td>'+ semGrade+'</td></tr></tbody>' +
+                '</table></div></div></div></div></div>');
+            }
             
           });
         }
