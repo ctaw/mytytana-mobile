@@ -223,12 +223,8 @@
             var gName = $(this).find('guardian-name').text();
             var gAddress = $(this).find('guardian-address').text();
             var gNumber = $(this).find('guardian-contact-number').text();
-            var gsName = $(this).find('gs-name').text();
-            var gsLocation = $(this).find('gs-location').text();
-            var gsYear = $(this).find('gs-year').text();
-            var hsName = $(this).find('hs-name').text();
-            var hsLocation = $(this).find('hs-location').text();
-            var hsYear = $(this).find('hs-year').text();
+            var unitAllowed = $(this).find('unit-allowed').text();
+            var yearLevel = $(this).find('year-level').text();
 
             var monthNames = ["January", "February", "March", "April", "May", "June",
                               "July", "August", "September", "October", "November", "December"];
@@ -251,7 +247,9 @@
             $("#studentInfo").append('<tr><th>Student Number</th><td>'+ sNumber +'</td></tr>' +
               '<tr><th>Name</th><td>'+ fullname +'</td></tr>' +
               '<tr><th>Course</th><td>' + course + '</td></tr>'+
+              '<tr><th>Year Level</th><td>'+ yearLevel +'</td></tr>'+
               '<tr><th>Curriculum Yr</th><td>'+ cYear +'</td></tr>'+
+              '<tr><th>Unit Allowed</th><td>'+ unitAllowed +'</td></tr>'+
               '<tr><th>Enrollment Status</th><td>'+ eStatus +'</td></tr>');
 
             $("#basicInfo").append('<tr><td>Gender</td><td>'+ gender +'</td></tr>' + 
