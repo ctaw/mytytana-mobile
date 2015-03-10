@@ -86,7 +86,7 @@
 
             
             <div class="row" id="firstSem"><!-- start -->
-              <div class="panel panel-default">
+              <!-- <div class="panel panel-default">
                 <div class="panel-heading"><center><div class="semTitle"></div></center></div>
                   <div class="panel-body">
                     <div class="table-responsive">
@@ -110,7 +110,7 @@
                       </table>
                     </div>
                   </div>
-              </div>
+              </div> -->
             </div><!-- end -->
 
 
@@ -142,18 +142,131 @@
             var lec = $(this).find('unit-lec').text();
             var lab = $(this).find('unit-lab').text();
 
-            
-              $(".semTitle").text('A.Y.' + year +' - ' + tillYear +' 1st Semester');
-              $('#scholasticGrade > tbody:last').append('<tr><td>'+ sCode +'</td><td>'+ description +'</td><td>'+ lec +'</td><td>'+ lab +'<td>'+ semGrade +'</td></tr>');
-          
+            // if(year == 2011){
+            // $(".semTitle").text('A.Y.' + year +' - ' + tillYear +' 1st Semester');
+            //   $('#scholasticGrade > tbody:last').append('<tr><td>'+ sCode +'</td><td>'+ description +'</td><td>'+ lec +'</td><td>'+ lab +'<td>'+ semGrade +'</td></tr>');
+            // }
+            var zero = 2010;
+            var one = 2011;
+            var two = 2012;
+            var three = 2013;
+            var four = 2014;
+            var five = 2015;
+            var six = 2016;
 
-
-            // $("#firstSem").append('<div class="panel panel-default">'+
-            //   '<div class="panel-heading"><center> A.Y. ' +  year + ' - ' + tillYear + ', 1st Semester</center></div>'+
-            //   '<div class="panel-body"><div class="row"><div class="col-lg-6"><table class="table table-condensed table-hover">'+
-            //   '<thead><tr><th>Subject Code</th><th>Grade</th></tr></thead>'+
-            //   '<tbody><tr><td>' + sCode + '</td><td>'+ semGrade +'</td></tr></tbody>' +
-            //   '</table></div></div></div></div>');
+            if(zero == year){
+              $("#firstSem").append('<div class="panel panel-default">'+
+              '<div class="panel-heading"><center> A.Y. ' +  year + ' - ' + tillYear + ', 1st Semester</center></div>'+
+              '<div class="panel-body"><div class="table-responsive"><table class="table table-condensed table-hover table-bordered" id="scholasticGrade">'+
+              '<thead><tr>'+
+              '<th rowspan="2">Subject Code</th>'+
+              '<th rowspan="2">Description</th>'+
+              '<th colspan="2">Units</th>'+
+              '<th rowspan="2">Grades</th>'+
+              '</tr>'+
+              '<tr><th width="100">Lec</th><th width="100">Lab</th></tr>'+
+              '</thead>'+
+              '<tbody><tr><td>'+ sCode +'</td><td>'+ description +'</td><td>'+ lec +'</td><td>'+ lab +'<td>'+ semGrade +'</td></tr></tbody>' +
+              '</table></div></div></div></div>');
+            }else if(one == year){
+              $("#firstSem").append('<div class="panel panel-default">'+
+              '<div class="panel-heading"><center> A.Y. ' +  year + ' - ' + tillYear + ', 1st Semester</center></div>'+
+              '<div class="panel-body"><div class="table-responsive"><table class="table table-condensed table-hover table-bordered" id="scholasticGrade">'+
+              '<thead><tr>'+
+              '<th rowspan="2">Subject Code</th>'+
+              '<th rowspan="2">Description</th>'+
+              '<th colspan="2">Units</th>'+
+              '<th rowspan="2">Grades</th>'+
+              '</tr>'+
+              '<tr><th width="100">Lec</th><th width="100">Lab</th></tr>'+
+              '</thead>'+
+              '<tbody><tr><td>'+ sCode +'</td><td>'+ description +'</td><td>'+ lec +'</td><td>'+ lab +'<td>'+ semGrade +'</td></tr></tbody>' +
+              '</table></div></div></div></div>');
+            }else if(two == year){
+              $("#firstSem").append('<div class="panel panel-default">'+
+              '<div class="panel-heading"><center> A.Y. ' +  year + ' - ' + tillYear + ', 1st Semester</center></div>'+
+              '<div class="panel-body"><div class="table-responsive"><table class="table table-condensed table-hover table-bordered" id="scholasticGrade">'+
+              '<thead><tr>'+
+              '<th rowspan="2">Subject Code</th>'+
+              '<th rowspan="2">Description</th>'+
+              '<th colspan="2">Units</th>'+
+              '<th rowspan="2">Grades</th>'+
+              '</tr>'+
+              '<tr><th width="100">Lec</th><th width="100">Lab</th></tr>'+
+              '</thead>'+
+              '<tbody><tr><td>'+ sCode +'</td><td>'+ description +'</td><td>'+ lec +'</td><td>'+ lab +'<td>'+ semGrade +'</td></tr></tbody>' +
+              '</table></div></div></div></div>');
+            }else if(two == year){
+              $("#firstSem").append('<div class="panel panel-default">'+
+              '<div class="panel-heading"><center> A.Y. ' +  year + ' - ' + tillYear + ', 1st Semester</center></div>'+
+              '<div class="panel-body"><div class="table-responsive"><table class="table table-condensed table-hover table-bordered" id="scholasticGrade">'+
+              '<thead><tr>'+
+              '<th rowspan="2">Subject Code</th>'+
+              '<th rowspan="2">Description</th>'+
+              '<th colspan="2">Units</th>'+
+              '<th rowspan="2">Grades</th>'+
+              '</tr>'+
+              '<tr><th width="100">Lec</th><th width="100">Lab</th></tr>'+
+              '</thead>'+
+              '<tbody><tr><td>'+ sCode +'</td><td>'+ description +'</td><td>'+ lec +'</td><td>'+ lab +'<td>'+ semGrade +'</td></tr></tbody>' +
+              '</table></div></div></div></div>');
+            }else if(three == year){
+              $("#firstSem").append('<div class="panel panel-default">'+
+              '<div class="panel-heading"><center> A.Y. ' +  year + ' - ' + tillYear + ', 1st Semester</center></div>'+
+              '<div class="panel-body"><div class="table-responsive"><table class="table table-condensed table-hover table-bordered" id="scholasticGrade">'+
+              '<thead><tr>'+
+              '<th rowspan="2">Subject Code</th>'+
+              '<th rowspan="2">Description</th>'+
+              '<th colspan="2">Units</th>'+
+              '<th rowspan="2">Grades</th>'+
+              '</tr>'+
+              '<tr><th width="100">Lec</th><th width="100">Lab</th></tr>'+
+              '</thead>'+
+              '<tbody><tr><td>'+ sCode +'</td><td>'+ description +'</td><td>'+ lec +'</td><td>'+ lab +'<td>'+ semGrade +'</td></tr></tbody>' +
+              '</table></div></div></div></div>');
+            }else if(four == year){
+              $("#firstSem").append('<div class="panel panel-default">'+
+              '<div class="panel-heading"><center> A.Y. ' +  year + ' - ' + tillYear + ', 1st Semester</center></div>'+
+              '<div class="panel-body"><div class="table-responsive"><table class="table table-condensed table-hover table-bordered" id="scholasticGrade">'+
+              '<thead><tr>'+
+              '<th rowspan="2">Subject Code</th>'+
+              '<th rowspan="2">Description</th>'+
+              '<th colspan="2">Units</th>'+
+              '<th rowspan="2">Grades</th>'+
+              '</tr>'+
+              '<tr><th width="100">Lec</th><th width="100">Lab</th></tr>'+
+              '</thead>'+
+              '<tbody><tr><td>'+ sCode +'</td><td>'+ description +'</td><td>'+ lec +'</td><td>'+ lab +'<td>'+ semGrade +'</td></tr></tbody>' +
+              '</table></div></div></div></div>');
+            }else if(five == year){
+              $("#firstSem").append('<div class="panel panel-default">'+
+              '<div class="panel-heading"><center> A.Y. ' +  year + ' - ' + tillYear + ', 1st Semester</center></div>'+
+              '<div class="panel-body"><div class="table-responsive"><table class="table table-condensed table-hover table-bordered" id="scholasticGrade">'+
+              '<thead><tr>'+
+              '<th rowspan="2">Subject Code</th>'+
+              '<th rowspan="2">Description</th>'+
+              '<th colspan="2">Units</th>'+
+              '<th rowspan="2">Grades</th>'+
+              '</tr>'+
+              '<tr><th width="100">Lec</th><th width="100">Lab</th></tr>'+
+              '</thead>'+
+              '<tbody><tr><td>'+ sCode +'</td><td>'+ description +'</td><td>'+ lec +'</td><td>'+ lab +'<td>'+ semGrade +'</td></tr></tbody>' +
+              '</table></div></div></div></div>');
+            }else if(six == year){
+              $("#firstSem").append('<div class="panel panel-default">'+
+              '<div class="panel-heading"><center> A.Y. ' +  year + ' - ' + tillYear + ', 1st Semester</center></div>'+
+              '<div class="panel-body"><div class="table-responsive"><table class="table table-condensed table-hover table-bordered" id="scholasticGrade">'+
+              '<thead><tr>'+
+              '<th rowspan="2">Subject Code</th>'+
+              '<th rowspan="2">Description</th>'+
+              '<th colspan="2">Units</th>'+
+              '<th rowspan="2">Grades</th>'+
+              '</tr>'+
+              '<tr><th width="100">Lec</th><th width="100">Lab</th></tr>'+
+              '</thead>'+
+              '<tbody><tr><td>'+ sCode +'</td><td>'+ description +'</td><td>'+ lec +'</td><td>'+ lab +'<td>'+ semGrade +'</td></tr></tbody>' +
+              '</table></div></div></div></div>');
+            }
             
           });
         }
