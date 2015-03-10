@@ -58,8 +58,8 @@
             <li><a href="grade.html" class="text-center"><i class="fa fa-file-text-o"></i></i></a></li>
             <li><a href="record.html" class="text-center"><i class="fa fa-book"></i></i></a></li>
             <li><a href="deficiency.html" class="text-center"><i class="fa fa-exclamation-triangle"></i></i></i></a></li>
-            <li><a href="event.html" class="text-center"><i class="fa fa-phone"></i></i></i></a></li>
-            <li><a href="directory.html" class="text-center"><i class="fa fa-calendar"></i></i></a></li>
+            <li><a href="event.html" class="text-center"><i class="fa fa-calendar"></i></i></i></a></li>
+            <li><a href="directory.html" class="text-center"><i class="fa fa-phone"></i></i></a></li>
 
             <br>
             <li><a href="newsfeed.html" class="text-center"><i class="fa fa-home"></i></i></a></li>
@@ -187,10 +187,10 @@
             var semVal1 = 1;
 
             if(semVal == sem){
-              $(".sem-row1").text("A.Y" + AY + " 1st Semester");
+              $(".sem-row1").text("A.Y " + AY + " 1st Semester");
               $('#eventRow1').append('<table class="events-list"><tbody><tr><td><div class="event-date"><div class="event-day">'+ day +'</div><div class="event-month">'+ month +'</div></div></td><td>'+ caption +'</td></tr></tbody></table>');
             } else if(semVal1 == sem){
-              $(".sem-row2").text("A.Y" + AY + " 2nd Semester");
+              $(".sem-row2").text("A.Y " + AY + " 2nd Semester");
               $('#eventRow2').append('<table class="events-list"><tbody><tr><td><div class="event-date"><div class="event-day">'+ day +'</div><div class="event-month">'+ month +'</div></div></td><td>'+ caption +'</td></tr></tbody></table>');
             } else{
               $(".sem-row3").text("Summer");
