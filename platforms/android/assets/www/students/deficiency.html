@@ -76,17 +76,35 @@
           <!-- top nav -->
           <div class="navbar navbar-blue navbar-static-top">  
             <div class="navbar-header-center">
-              Newsfeeds
+              DEFICIENCY AND WARNING
             </div>
           </div>
           <!-- /top nav -->
 
           <div class="full col-sm-9" id="news"><!-- full col -->
+              <div class="row"><!-- row -->
 
-            <div id="result"></div>
-            <div class="row" id="row-news">
-              
-            </div>
+              <div class="panel panel-default" id="def">
+                <div class="panel-heading-two">
+                  <center><h4>DEFICIENCY</h4></center>
+                </div>
+                  <div class="panel-body" id="defPanel">
+                  </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading-two">
+                  <center><h4>WARNING</h4></center>
+                </div>
+                  <div class="panel-body" id="warPanel">
+                    
+                    
+
+
+                  </div>
+              </div>
+
+            </div><!-- row -->
 
 
           </div><!-- full col -->
@@ -98,45 +116,32 @@
   </div>
   <!-- content goes here-->
     <script>
+      var studentNumber = localStorage.name
       $.ajax({
         type: 'GET',
-        url: 'https://mytytana.herokuapp.com/api/newsfeeds.xml',
+        url: 'https://mytytana.herokuapp.com/api/warnings/'+ studentNumber +'/',
         dataType: 'xml',
         success: function(xmlDoc) {
           var $xml = $(xmlDoc);
-          $xml.find('newsfeed').each(function() {
+          $xml.find('warning').each(function() {
+            var category = $(this).find('category').text();
             var title = $(this).find('title').text();
-            var department = $(this).find('department').text();
-            var eDate = $(this).find('event-date').text();
-            var description = $(this).find('description').text();
-            var path_name = $(this).find('path-name').text();
+            var caption = $(this).find('caption').text();
 
-            var monthNames = ["January", "February", "March", "April", "May", "June",
-                              "July", "August", "September", "October", "November", "December"];
-            
-            var event_date = new Date(eDate);
+            var d = 1;
+            var w = 0;
 
-            var monthDay = event_date.getDate();
-            var monthN = event_date.getMonth();
-            var year = event_date.getFullYear();
-            var monthname = monthNames[event_date.getMonth()];
-
-            var eventDate = monthname + " " + monthDay + ", " + year;
-
-            if (path_name != ""){
-              var photo = '<div class="thumbnails-div"><img src="../' +
-              path_name + '" class="img-responsive img-thumbnail photo-news"></div>';
+            if(d==category){
+              $("#defPanel").append('<div class="panel panel-default"><div class="panel-heading"><center>'+ title +'</center></div>'+
+                ' <div class="panel-body">'+ caption +'</div></div>'
+                );
+            }else if(w==category){
+              $("#warPanel").append('<div class="panel panel-default"><div class="panel-heading"><center>'+ title +'</center></div>'+
+                ' <div class="panel-body">'+ caption +'</div></div>');
             }else{
-              var photo = '<div></div>';
+
             }
-
-
-            $("#news").append('<div class="row" id="row-news"><div class="col-sm-12 featured-news"><div class="caption" id="title">'+ 
-              title +'<div class="pull-right dept">'+
-              department +'</div></div><div class="date" id="datePosted">'+
-              eventDate +'</div><div class="intro" id="description">'+
-              description + '' + photo +'</div></div></div>');
-
+            
           });
         }
       });   

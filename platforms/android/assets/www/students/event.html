@@ -40,10 +40,10 @@
 
           <ul class="nav hidden-xs" id="lg-menu">
             <li class="active"><a href="profile.html"><i class="fa fa-user"></i> Student Profile</a></li>
-            <li><a href="#"><i class="fa fa-calendar-o"></i> Class Schedule</a></li>
-            <li><a href="#"><i class="fa fa-file-text-o"></i> Current Grades</a></li>
-            <li><a href="#"><i class="fa fa-book"></i> Scholastic Record</a></li>
-            <li><a href="#"><i class="fa fa-exclamation-triangle"></i></i></i> Deficiency/ Warning</a></li>
+            <li><a href="schedule.html"><i class="fa fa-calendar-o"></i> Class Schedule</a></li>
+            <li><a href="grade.html"><i class="fa fa-file-text-o"></i> Current Grades</a></li>
+            <li><a href="record.html"><i class="fa fa-book"></i> Scholastic Record</a></li>
+            <li><a href="deficiency.html"><i class="fa fa-exclamation-triangle"></i></i></i> Deficiency/ Warning</a></li>
             <li><a href="event.html"><i class="fa fa-calendar"></i></i> Academic Calendar</a></li>
             <li><a href="directory.html"><i class="fa fa-phone"></i></i></i> Directory</a></li>
             <br>
@@ -54,10 +54,10 @@
           <!-- tiny only nav-->
           <ul class="nav visible-xs" id="xs-menu">
             <li><a href="profile.html" class="text-center"><i class="fa fa-user"></i></i></a></li>
-            <li><a href="#" class="text-center"><i class="fa fa-calendar-o"></i></i></a></li>
-            <li><a href="#" class="text-center"><i class="fa fa-file-text-o"></i></i></a></li>
-            <li><a href="#" class="text-center"><i class="fa fa-book"></i></i></a></li>
-            <li><a href="#" class="text-center"><i class="fa fa-exclamation-triangle"></i></i></i></a></li>
+            <li><a href="schedule.html" class="text-center"><i class="fa fa-calendar-o"></i></i></a></li>
+            <li><a href="grade.html" class="text-center"><i class="fa fa-file-text-o"></i></i></a></li>
+            <li><a href="record.html" class="text-center"><i class="fa fa-book"></i></i></a></li>
+            <li><a href="deficiency.html" class="text-center"><i class="fa fa-exclamation-triangle"></i></i></i></a></li>
             <li><a href="event.html" class="text-center"><i class="fa fa-phone"></i></i></i></a></li>
             <li><a href="directory.html" class="text-center"><i class="fa fa-calendar"></i></i></a></li>
 
@@ -91,14 +91,14 @@
                     <div class="panel-heading" role="tab" id="headingOne">
                       <h4 class="panel-title">
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          A.Y. 2014-2015, 1st Semester
+                          <div class="sem-row1"></div>
                         </a>
                       </h4>
                     </div>
 
                     <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                       <div class="panel-body">
-                        <div class="row" id="eventRow">
+                        <div class="row" id="eventRow1">
                           
                         </div>
                       </div>
@@ -107,7 +107,27 @@
                 </div>
               </div>
 
-              <div class="col-lg-6"></div>
+              <div class="col-lg-6">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                          <div class="sem-row2"></div>
+                        </a>
+                      </h4>
+                    </div>
+
+                    <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                      <div class="panel-body">
+                        <div class="row" id="eventRow2">
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
             </div>
 
@@ -126,10 +146,31 @@
         dataType: 'xml',
         success: function(xmlDoc) {
           var $xml = $(xmlDoc);
+         
+
           $xml.find('event').each(function() {
             var month = $(this).find('month').text();
-            $('#eventRow').append('<table class="events-list"><tbody><tr><td><div class="event-day">27-29</div><div class="event-month">May</div></td></tr><tr><td>Enrollment: Irregular Students</td></tr></tbody></table>'
-              );
+            var day = $(this).find('day').text();
+            var caption = $(this).find('caption').text();
+            var sem = $(this).find('sem').text();
+            var year = $(this).find('year').text();
+
+            var nextYear = parseInt(year)  + 1;
+
+            
+            var AY = year + "-" + nextYear;
+            
+          
+            var semVal = 0;
+
+            if(semVal == sem){
+              $(".sem-row1").text(AY + " 1st Semester");
+              $('#eventRow1').append('<table class="events-list"><tbody><tr><td><div class="event-date"><div class="event-day">'+ day +'</div><div class="event-month">'+ month +'</div></div></td><td>'+ caption +'</td></tr></tbody></table>');
+            } else{
+              $(".sem-row2").text(AY + " 2nd Semester");
+              $('#eventRow2').append('<table class="events-list"><tbody><tr><td><div class="event-date"><div class="event-day">'+ day +'</div><div class="event-month">'+ month +'</div></div></td><td>'+ caption +'</td></tr></tbody></table>');
+            }
+
           });
         }
       });   

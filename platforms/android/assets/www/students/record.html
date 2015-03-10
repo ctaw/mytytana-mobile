@@ -76,17 +76,40 @@
           <!-- top nav -->
           <div class="navbar navbar-blue navbar-static-top">  
             <div class="navbar-header-center">
-              Newsfeeds
+              Scholastic Record
             </div>
           </div>
           <!-- /top nav -->
 
           <div class="full col-sm-9" id="news"><!-- full col -->
 
-            <div id="result"></div>
-            <div class="row" id="row-news">
-              
-            </div>
+
+            
+            <div class="row" id="firstSem"><!-- start -->
+              <div class="panel panel-default">
+                <div class="panel-heading"><center><div class="semTitle"></div></center></div>
+                  <div class="panel-body">
+                    <table class="table table-condensed table-hover table-bordered" id="scholasticGrade">
+                      <thead>
+                        <tr>
+                          <th rowspan="2">Subject Code</th>
+                          <th rowspan="2">Description</th>
+                          <th colspan="2">Units</th>
+                          <th rowspan="2">Grades</th>
+                        </tr>
+                        <tr>
+                          <th width="100">Lec</th>
+                          <th width="100">Lab</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+              </div>
+            </div><!-- end -->
 
 
           </div><!-- full col -->
@@ -98,45 +121,41 @@
   </div>
   <!-- content goes here-->
     <script>
+      var studentNumber = localStorage.name
       $.ajax({
         type: 'GET',
-        url: 'https://mytytana.herokuapp.com/api/newsfeeds.xml',
+        url: 'https://mytytana.herokuapp.com/api/grades/'+ studentNumber +'/',
         dataType: 'xml',
         success: function(xmlDoc) {
           var $xml = $(xmlDoc);
-          $xml.find('newsfeed').each(function() {
-            var title = $(this).find('title').text();
-            var department = $(this).find('department').text();
-            var eDate = $(this).find('event-date').text();
+          $xml.find('grade').each(function() {
+            var year = $(this).find('year').text();
+            var sCode = $(this).find('subject-code').text();
+            var prelim = $(this).find('prelim').text();
+            var midterm = $(this).find('midterm').text();
+            var finalG = $(this).find('final').text();
+            var semGrade = $(this).find('sem-grade').text();
+            var tillYear = parseInt(year) +1;
             var description = $(this).find('description').text();
-            var path_name = $(this).find('path-name').text();
+            var lec = $(this).find('unit-lec').text();
+            var lab = $(this).find('unit-lab').text();
 
-            var monthNames = ["January", "February", "March", "April", "May", "June",
-                              "July", "August", "September", "October", "November", "December"];
             
-            var event_date = new Date(eDate);
+            var current_year = 2014;
 
-            var monthDay = event_date.getDate();
-            var monthN = event_date.getMonth();
-            var year = event_date.getFullYear();
-            var monthname = monthNames[event_date.getMonth()];
-
-            var eventDate = monthname + " " + monthDay + ", " + year;
-
-            if (path_name != ""){
-              var photo = '<div class="thumbnails-div"><img src="../' +
-              path_name + '" class="img-responsive img-thumbnail photo-news"></div>';
-            }else{
-              var photo = '<div></div>';
+            if(current_year <= year){
+              $(".semTitle").text('A.Y.' + year +' - ' + tillYear +' 1st Semester');
+              $('#scholasticGrade > tbody:last').append('<tr><td>'+ sCode +'</td><td>'+ description +'</td><td>'+ lec +'</td><td>'+ lab +'<td>'+ semGrade +'</td></tr>');
             }
 
 
-            $("#news").append('<div class="row" id="row-news"><div class="col-sm-12 featured-news"><div class="caption" id="title">'+ 
-              title +'<div class="pull-right dept">'+
-              department +'</div></div><div class="date" id="datePosted">'+
-              eventDate +'</div><div class="intro" id="description">'+
-              description + '' + photo +'</div></div></div>');
-
+            // $("#firstSem").append('<div class="panel panel-default">'+
+            //   '<div class="panel-heading"><center> A.Y. ' +  year + ' - ' + tillYear + ', 1st Semester</center></div>'+
+            //   '<div class="panel-body"><div class="row"><div class="col-lg-6"><table class="table table-condensed table-hover">'+
+            //   '<thead><tr><th>Subject Code</th><th>Grade</th></tr></thead>'+
+            //   '<tbody><tr><td>' + sCode + '</td><td>'+ semGrade +'</td></tr></tbody>' +
+            //   '</table></div></div></div></div>');
+            
           });
         }
       });   

@@ -87,20 +87,28 @@
             
             <div class="row" id="firstSem"><!-- start -->
               <div class="panel panel-default">
-                <div class="panel-heading"><center><div class="semTitle">A.Y. 1st Semester</div></center></div>
+                <div class="panel-heading"><center><div class="semTitle"></div></center></div>
                   <div class="panel-body">
-                    <table class="table table-condensed table-hover" id="scholasticGrade">
-                      <thead>
-                        <tr>
-                          <th>Subject Code</th>
-                          <th>Sem Grade</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                        </tr>
-                      </tbody>
-                    </table>
+                    <div class="table-responsive">
+                      <table class="table table-condensed table-hover table-bordered" id="scholasticGrade">
+                        <thead>
+                          <tr>
+                            <th rowspan="2">Subject Code</th>
+                            <th rowspan="2">Description</th>
+                            <th colspan="2">Units</th>
+                            <th rowspan="2">Grades</th>
+                          </tr>
+                          <tr>
+                            <th width="100">Lec</th>
+                            <th width="100">Lab</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
               </div>
             </div><!-- end -->
@@ -130,11 +138,14 @@
             var finalG = $(this).find('final').text();
             var semGrade = $(this).find('sem-grade').text();
             var tillYear = parseInt(year) +1;
+            var description = $(this).find('description').text();
+            var lec = $(this).find('unit-lec').text();
+            var lab = $(this).find('unit-lab').text();
 
             
-            
-
-            $('#scholasticGrade > tbody:last').append('<tr><td>'+ sCode +'</td><td>'+ semGrade +'</td></tr>');
+              $(".semTitle").text('A.Y.' + year +' - ' + tillYear +' 1st Semester');
+              $('#scholasticGrade > tbody:last').append('<tr><td>'+ sCode +'</td><td>'+ description +'</td><td>'+ lec +'</td><td>'+ lab +'<td>'+ semGrade +'</td></tr>');
+          
 
 
             // $("#firstSem").append('<div class="panel panel-default">'+

@@ -19,6 +19,7 @@
     <script src="../js/jquery.js"></script>
     <script src="../js/bootstrap.js"></script>
     <script src="../js/scripts.js"></script>
+    
   </head>
   
   <body>
@@ -75,113 +76,212 @@
           <!-- top nav -->
           <div class="navbar navbar-blue navbar-static-top">  
             <div class="navbar-header-center">
-              Student Profile
+              Schedule
             </div>
           </div>
           <!-- /top nav -->
 
           <div class="full col-sm-9" id="news"><!-- full col -->
 
-            <div class="row">
-              <div class="col-md-12">
-                <center><img src="../img/avatar.png" class="img-circle"></center>
-              </div>
-            </div>
-            <br>
-            <div class="row"><!-- row -->
+            
+            <div class="row" id="mondayDiv"><!-- start -->
               <div class="panel-group" id="accordion">
                 <div class="panel panel-default" id="panel1">
                   <div class="panel-heading">
                      <h4 class="panel-title">
                       <a data-toggle="collapse" data-target="#collapseOne" 
                          href="#collapseOne">
-                        Student Information
+                       <center>MONDAY</center>
                       </a>
                       </h4>
                   </div>
 
                   <div id="collapseOne" class="panel-collapse collapse in">
                     <div class="panel-body">
-                      <table class="table table-condensed" id="studentInfo">
+                      <table class="table table-condensed table-hover table-bordered" id="mondayTable">
+                        <thead>
+                          <tr>
+                            <th>Time</th>
+                            <th>Subject Code</th>
+                            <th>Section</th>
+                            <th>Room</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
                       </table>
                     </div>
                   </div>
 
                 </div>
               </div>
-            </div>
+            </div><!-- end -->
 
-
-            <div class="row"><!-- row -->
+            <div class="row" id="tuesdayDiv"><!-- start -->
               <div class="panel-group" id="accordion">
                 <div class="panel panel-default" id="panel1">
                   <div class="panel-heading">
                      <h4 class="panel-title">
                       <a data-toggle="collapse" data-target="#collapseTwo" 
                          href="#collapseTwo">
-                        Basic Information
+                       <center>TUESDAY</center>
                       </a>
                       </h4>
                   </div>
 
                   <div id="collapseTwo" class="panel-collapse collapse in">
                     <div class="panel-body">
-                      <table class="table table-condensed" id="basicInfo">
+                      <table class="table table-condensed table-hover table-bordered" id="tuesdayTable">
+                        <thead>
+                          <tr>
+                            <th>Time</th>
+                            <th>Subject Code</th>
+                            <th>Section</th>
+                            <th>Room</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
                       </table>
                     </div>
                   </div>
 
                 </div>
               </div>
-            </div>
+            </div><!-- end -->
 
-
-            <div class="row"><!-- row -->
+            <div class="row" id="wednesdayDiv"><!-- start -->
               <div class="panel-group" id="accordion">
                 <div class="panel panel-default" id="panel1">
                   <div class="panel-heading">
                      <h4 class="panel-title">
                       <a data-toggle="collapse" data-target="#collapseThree" 
                          href="#collapseThree">
-                        Guardian Information
+                       <center>WEDNESDAY</center>
                       </a>
                       </h4>
                   </div>
 
                   <div id="collapseThree" class="panel-collapse collapse in">
                     <div class="panel-body">
-                      <table class="table table-condensed" id="guardianInfo">
+                      <table class="table table-condensed table-hover table-bordered" id="wednesdayTable">
+                        <thead>
+                          <tr>
+                            <th>Time</th>
+                            <th>Subject Code</th>
+                            <th>Section</th>
+                            <th>Room</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
                       </table>
                     </div>
                   </div>
 
                 </div>
               </div>
-            </div>
+            </div><!-- end -->
 
-            <div class="row"><!-- row -->
+            <div class="row" id="wednesdayDiv"><!-- start -->
               <div class="panel-group" id="accordion">
                 <div class="panel panel-default" id="panel1">
                   <div class="panel-heading">
                      <h4 class="panel-title">
                       <a data-toggle="collapse" data-target="#collapseFour" 
                          href="#collapseFour">
-                        Educational Attainment
+                       <center>THURSDAY</center>
                       </a>
                       </h4>
                   </div>
 
                   <div id="collapseFour" class="panel-collapse collapse in">
                     <div class="panel-body">
-                      <table class="table table-condensed" id="educationInfo">
+                      <table class="table table-condensed table-hover table-bordered" id="thursdayTable">
+                        <thead>
+                          <tr>
+                            <th>Time</th>
+                            <th>Subject Code</th>
+                            <th>Section</th>
+                            <th>Room</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
                       </table>
                     </div>
                   </div>
 
                 </div>
               </div>
-            </div>
+            </div><!-- end -->
 
+            <div class="row" id="wednesdayDiv"><!-- start -->
+              <div class="panel-group" id="accordion">
+                <div class="panel panel-default" id="panel1">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                      <a data-toggle="collapse" data-target="#collapseFive" 
+                         href="#collapseFive">
+                       <center>FRIDAY</center>
+                      </a>
+                      </h4>
+                  </div>
+
+                  <div id="collapseFive" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                      <table class="table table-condensed table-hover table-bordered" id="fridayTable">
+                        <thead>
+                          <tr>
+                            <th>Time</th>
+                            <th>Subject Code</th>
+                            <th>Section</th>
+                            <th>Room</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div><!-- end -->
+
+
+            <div class="row" id="wednesdayDiv"><!-- start -->
+              <div class="panel-group" id="accordion">
+                <div class="panel panel-default" id="panel1">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                      <a data-toggle="collapse" data-target="#collapseSix" 
+                         href="#collapseSix">
+                       <center>SATURDAY</center>
+                      </a>
+                      </h4>
+                  </div>
+
+                  <div id="collapseSix" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                      <table class="table table-condensed table-hover table-bordered" id="saturdayTable">
+                        <thead>
+                          <tr>
+                            <th>Time</th>
+                            <th>Subject Code</th>
+                            <th>Section</th>
+                            <th>Room</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div><!-- end -->
 
 
           </div><!-- full col -->
@@ -192,86 +292,45 @@
     </div>
   </div>
   <!-- content goes here-->
-
     <script>
       var studentNumber = localStorage.name
       $.ajax({
         type: 'GET',
-        url: 'https://mytytana.herokuapp.com/api/students/'+ studentNumber +'',
+        url: 'https://mytytana.herokuapp.com/api/schedules/'+ studentNumber +'/',
         dataType: 'xml',
         success: function(xmlDoc) {
           var $xml = $(xmlDoc);
-          $xml.find('student').each(function() {
-            var sNumber = $(this).find('student-number').text();
-            var fName = $(this).find('first-name').text();
-            var mName = $(this).find('middle-name').text();
-            var lName = $(this).find('last-name').text();
-            var fullname = lName + " " + fName + ", " + mName;
-            var course = $(this).find('course-code').text();
-            var cYear = $(this).find('curriculum-year').text();
-            var eStatus = $(this).find('enrollment-status').text();
-            var eGender = $(this).find('gender').text();
-            var birthday = $(this).find('birthday').text();
-            var birthplace = $(this).find('birthplace').text();
-            var civilStatus = $(this).find('civil-status').text();
-            var nationality = $(this).find('nationality').text();
-            var religion = $(this).find('religion').text();
-            var address = $(this).find('address').text();
-            var city = $(this).find('city').text();
-            var cNumber = $(this).find(' contact-number').text();
-            var email = $(this).find('email').text();
-            var gName = $(this).find('guardian-name').text();
-            var gAddress = $(this).find('guardian-address').text();
-            var gNumber = $(this).find('guardian-contact-number').text();
-            var gsName = $(this).find('gs-name').text();
-            var gsLocation = $(this).find('gs-location').text();
-            var gsYear = $(this).find('gs-year').text();
-            var hsName = $(this).find('hs-name').text();
-            var hsLocation = $(this).find('hs-location').text();
-            var hsYear = $(this).find('hs-year').text();
+          $xml.find('schedule').each(function() {
+            var sNum = $(this).find('student-number').text();
+            var day = $(this).find('day').text();
+            var time = $(this).find('time').text();
+            var sCode = $(this).find('subject-code').text();
+            var section = $(this).find('section').text();
+            var room = $(this).find('room').text();
 
-            var monthNames = ["January", "February", "March", "April", "May", "June",
-                              "July", "August", "September", "October", "November", "December"];
+            var monday = 0;
+            var tuesday = 1;
+            var wednesday = 2;
+            var thursday = 3;
+            var friday = 4;
+            var saturday = 5;
 
-
-            var nDate = new Date (birthday)
-            var monthDay = nDate.getDate();
-            var monthN = nDate.getMonth();
-            var year = nDate.getFullYear();
-            var monthname = monthNames[nDate.getMonth()];
-
-            var birthDate = monthname + " " + monthDay + ", " + year;
-
-            if(eGender == 0){
-              var gender = "Female";
+            if(monday == day){
+              $('#mondayTable > tbody:last').append('<tr><td>'+ time +'</td><td>'+ sCode +'</td><td>'+ section +'</td><td>'+ room +'</td></tr>');
+            }else if (tuesday == day){
+              $('#tuesdayTable > tbody:last').append('<tr><td>'+ time +'</td><td>'+ sCode +'</td><td>'+ section +'</td><td>'+ room +'</td></tr>');
+            }else if (wednesday == day){
+              $('#wednesdayTable > tbody:last').append('<tr><td>'+ time +'</td><td>'+ sCode +'</td><td>'+ section +'</td><td>'+ room +'</td></tr>');
+            }else if (thursday == day){
+              $('#thursdayTable > tbody:last').append('<tr><td>'+ time +'</td><td>'+ sCode +'</td><td>'+ section +'</td><td>'+ room +'</td></tr>');
+            }else if (friday == day){
+              $('#fridayTable > tbody:last').append('<tr><td>'+ time +'</td><td>'+ sCode +'</td><td>'+ section +'</td><td>'+ room +'</td></tr>');
+            }else if (saturday == day){
+              $('#saturdayTable > tbody:last').append('<tr><td>'+ time +'</td><td>'+ sCode +'</td><td>'+ section +'</td><td>'+ room +'</td></tr>');
             }else{
-              var gender = "Male";
+
             }
-
-            $("#studentInfo").append('<tr><th>Student Number</th><td>'+ sNumber +'</td></tr>' +
-              '<tr><th>Name</th><td>'+ fullname +'</td></tr>' +
-              '<tr><th>Course</th><td>' + course + '</td></tr>'+
-              '<tr><th>Curriculum Yr</th><td>'+ cYear +'</td></tr>'+
-              '<tr><th>Enrollment Status</th><td>'+ eStatus +'</td></tr>');
-
-            $("#basicInfo").append('<tr><td>Gender</td><td>'+ gender +'</td></tr>' + 
-              '<tr><th>Birthday</th><td>'+ birthDate +'</td></tr>' +
-              '<tr><th>Birthplace</th><td>'+ birthplace +'</td></tr>' +
-              '<tr><th>Civil Status</th><td>'+ civilStatus +'</td></tr>' +
-              '<tr><th>Nationality</th><td>'+ nationality +'</td></tr>' +
-              '<tr><th>Religion</th><td>'+ religion +'</td></tr>' +
-              '<tr><th>Address</th><td>'+ address +'</td></tr>' +
-              '<tr><th>Town/City</th><td>'+ city +'</td></tr>' +
-              '<tr><th>Contact No.</th><td>'+ cNumber +'</td></tr>' +
-              '<tr><th>Email</th><td>'+ email +'</td></tr>');
-
-            $("#guardianInfo").append('<tr><th>Guardian/Parents</th><td>'+ gName +'</td></tr>' +
-              '<tr><th>Address</th><td>'+ gAddress +'</td></tr>' +
-              '<tr><th>Contact No.</th><td>'+ gNumber +'</td></tr>');
-            $("#educationInfo").append('<tr><th>Elementary</th><td>'+ gsName +'</td><td>'+ gsLocation +'</td><td>'+ gsYear+'</td></tr>'+ 
-              '<tr><th>Highschool</th><td>'+ hsName +'</td><td>'+ hsLocation +'</td><td>'+ hsYear+'</td></tr>'
-              );
-
+            
           });
         }
       });   

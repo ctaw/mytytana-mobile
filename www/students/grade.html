@@ -85,7 +85,26 @@
 
 
             
-            <div class="row" id="firstSem"><!-- start -->
+            <div class="row"><!-- start -->
+              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                  <div class="panel-heading-two" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <center><div class="semTitle"></div></center>
+                      </a>
+                    </h4>
+                  </div>
+
+                  <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                      <div class="row" id="firstSem">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div><!-- end -->
 
 
@@ -106,18 +125,32 @@
         success: function(xmlDoc) {
           var $xml = $(xmlDoc);
           $xml.find('grade').each(function() {
+            var year = $(this).find('year').text();
             var sCode = $(this).find('subject-code').text();
             var prelim = $(this).find('prelim').text();
             var midterm = $(this).find('midterm').text();
             var finalG = $(this).find('final').text();
             var semGrade = $(this).find('sem-grade').text();
+            var description = $(this).find('description').text();
+            var lec = $(this).find('unit-lec').text();
+            var lab = $(this).find('unit-lab').text();
+            var tillYear = parseInt(year) +1;
 
-            $("#firstSem").append('<div class="panel panel-default">'+
-              '<div class="panel-heading"><center>' + sCode + '</div>'+
-              '<div class="panel-body"<div class="row"><div class="col-lg-6 pull-right"><table class="table table-condensed table-hover">'+
-              '<thead><tr><th>Prelim</th><th>Midterm</th><th>Finals</th><th>Sem Grade</th></tr></thead>'+
-              '<tbody><tr><td>' + prelim + '</td><td>'+ midterm +'</td><td>'+ finalG+'</td><td>'+ semGrade+'</td></tr></tbody>' +
-              '</table></div></div></div></div>');
+            var current_year = 2014;
+
+            if(current_year <= year){
+
+              $(".semTitle").text('A.Y.' + year +' - ' + tillYear +' 1st Semester');
+
+              $("#firstSem").append('<div class="panel panel-default">'+
+                '<div class="panel-heading"><center>' + sCode + ' - ' + description + '</div>'+
+                '<div class="panel-body"<div class="row">'+
+                '<div class="col-lg-5"><p><b>Units</b></p><p class="info"> Lab '+ lab +'</p><p class="info">Lec '+ lec +'</p></div>' +
+                '<div class="col-lg-7 pull-right"><table class="table table-condensed table-hover">'+
+                '<thead><tr><th>Prelim</th><th>Midterm</th><th>Finals</th><th>Sem Grade</th></tr></thead>'+
+                '<tbody><tr><td>' + prelim + '</td><td>'+ midterm +'</td><td>'+ finalG+'</td><td>'+ semGrade+'</td></tr></tbody>' +
+                '</table></div></div></div></div>');
+            }
             
           });
         }
